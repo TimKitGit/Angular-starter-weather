@@ -1,0 +1,27 @@
+<div *ngIf="cityWeather">
+  <h1 class="sample-content">Weather</h1>
+  <div *ngFor="let city of cityWeather.list">
+    <hr>
+    <div style="font-size: 110%; font-weight: bold;">{{city.name}}</div>
+    <div>
+      <div style="display: block; clear: left;">
+        <div>
+          <div style="font-size:90%; font-weight: bold;"
+               title="Текущая температура"> Now {{city.main.temp}}°
+          </div>
+          <div style="display: block; clear: left; font-size: small;">Today from {{city.main.temp_min}}° to
+            {{city.main.temp_max}}°
+          </div>
+        </div>
+      </div>
+      <div style="display: block; clear: left; color: gray; font-size: small;">Humidity: {{city.main.humidity}}%
+      </div>
+      <div style="display: block; clear: left; color: gray; font-size: small;">Wind speed: {{city.wind.speed}}m/s
+      </div>
+      <div style="display: block; clear: left; color: gray; font-size: small;">Pressure:
+        {{city.main.pressure}}hpa
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
